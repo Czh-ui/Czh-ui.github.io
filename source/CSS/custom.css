@@ -1,0 +1,1211 @@
+/* =========================
+   文章卡片：玻璃效果
+   ========================= */
+
+.recent-post-item {
+  background: rgba(255, 255, 255, 0.72) !important;
+
+  border-radius: 18px !important;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all 0.3s ease;
+}
+
+/* 鼠标放上去时稍微浮起 */
+.recent-post-item:hover {
+  transform: translateY(-4px);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* =========================
+   网站整体背景
+   ========================= */
+
+body {
+  background:
+    radial-gradient(
+      circle at 15% 20%,
+      rgba(100, 180, 255, 0.35),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 85% 25%,
+      rgba(180, 120, 255, 0.30),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 50% 90%,
+      rgba(80, 220, 220, 0.25),
+      transparent 40%
+    ),
+    linear-gradient(
+      135deg,
+      #dff3ff 0%,
+      #eee5ff 50%,
+      #d9faff 100%
+    ) !important;
+
+  background-attachment: fixed !important;
+}
+
+/* =========================
+   右侧边栏：玻璃效果
+   ========================= */
+
+.card-widget {
+  background: rgba(255, 255, 255, 0.68) !important;
+
+  border-radius: 18px !important;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  transition: all 0.3s ease;
+}
+
+/* 鼠标放上去时稍微浮起 */
+.card-widget:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* =========================
+   头像卡片
+   ========================= */
+
+.card-widget.card-info {
+  overflow: hidden;
+}
+
+/* 头像 */
+.card-widget .avatar-img {
+  border-radius: 50%;
+  transition: transform 0.4s ease;
+}
+
+/* 鼠标放到头像卡片时头像轻微旋转 */
+.card-widget.card-info:hover .avatar-img {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* =========================
+   顶部 Banner
+   ========================= */
+
+#page-header {
+  overflow: hidden;
+
+  /* 底部圆角 */
+  border-radius: 0 0 24px 24px;
+
+  /* 柔和阴影，让 Banner 和下面背景分开 */
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Banner 上添加一层淡淡的蓝紫渐变 */
+#page-header::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.02) 0%,
+      rgba(100, 170, 255, 0.08) 55%,
+      rgba(80, 180, 220, 0.22) 100%
+    );
+
+  pointer-events: none;
+}
+
+/* Banner 底部增加一点柔和的过渡 */
+#page-header::after {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 70px;
+
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    rgba(220, 245, 255, 0.25)
+  );
+
+  pointer-events: none;
+}
+
+/* =========================
+   顶部导航栏
+   ========================= */
+
+#nav {
+  background: rgba(255, 255, 255, 0.55) !important;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06) !important;
+
+  transition: all 0.3s ease;
+}
+
+/* 导航文字 */
+#nav a {
+  transition: all 0.25s ease;
+}
+
+/* 鼠标移动到导航项目 */
+#nav .menus_items .menus_item:hover > a {
+  color: #5c8fd9 !important;
+}
+
+/* 当前所在页面 */
+#nav .menus_items .menus_item > a:hover {
+  transform: translateY(-1px);
+}
+
+/* =========================
+   文章卡片内部样式
+   ========================= */
+
+/* 文章标题 */
+.recent-post-item .article-title {
+  font-size: 23px !important;
+  font-weight: 700 !important;
+
+  color: #4f75b8 !important;
+
+  transition: all 0.25s ease;
+}
+
+/* 鼠标移动到标题 */
+.recent-post-item .article-title:hover {
+  color: #7b5fc9 !important;
+}
+
+/* 文章摘要 */
+.recent-post-item .content {
+  color: #5f6673 !important;
+
+  font-size: 15px;
+
+  line-height: 1.8;
+
+  margin-top: 12px;
+}
+
+/* 文章卡片内部的日期、分类等信息 */
+.recent-post-item .article-meta-wrap {
+  color: #7b8494 !important;
+
+  font-size: 13px;
+}
+
+/* 元信息里的图标 */
+.recent-post-item .article-meta-wrap i {
+  color: #7098d0 !important;
+}
+
+/* 文章卡片内部整体留白 */
+.recent-post-item .recent-post-info {
+  padding: 22px 25px !important;
+}
+
+/* =========================
+   鼠标点击光圈特效
+   ========================= */
+
+.click-effect {
+  position: fixed;
+
+  width: 20px;
+  height: 20px;
+
+  border-radius: 50%;
+
+  pointer-events: none;
+
+  z-index: 999999;
+
+  transform: translate(-50%, -50%) scale(0);
+
+  border: 2px solid rgba(110, 150, 240, 0.75);
+
+  box-shadow:
+    0 0 10px rgba(110, 150, 240, 0.5),
+    0 0 25px rgba(150, 120, 240, 0.35);
+
+  animation: clickRipple 0.7s ease-out forwards;
+}
+
+@keyframes clickRipple {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0.9;
+  }
+
+  60% {
+    transform: translate(-50%, -50%) scale(2.2);
+    opacity: 0.45;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+
+/* =========================
+   音乐播放器
+   ========================= */
+
+#czh-music-player {
+  position: fixed;
+
+  right: 25px;
+  bottom: 25px;
+
+  width: 360px;
+
+  padding: 14px 16px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  background: rgba(255, 255, 255, 0.68);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.12);
+
+  z-index: 99999;
+
+  transition: all 0.3s ease;
+}
+
+/* 鼠标放上去 */
+#czh-music-player:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.16);
+}
+
+/* 唱片图标 */
+
+.music-cover {
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #719de0,
+      #9b83d8
+    );
+
+  color: white;
+
+  font-size: 22px;
+
+  box-shadow:
+    0 0 15px rgba(110, 150, 230, 0.35);
+
+  animation: musicRotate 5s linear infinite;
+
+  animation-play-state: paused;
+}
+
+/* 播放时旋转 */
+
+#czh-music-player.playing .music-cover {
+  animation-play-state: running;
+}
+
+@keyframes musicRotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 歌曲信息 */
+
+.music-info {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.music-title {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #4f75b8;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.music-status {
+  margin-top: 4px;
+
+  font-size: 11px;
+
+  color: #7b8494;
+}
+
+/* 按钮 */
+
+.music-controls {
+  display: flex;
+
+  align-items: center;
+
+  gap: 4px;
+}
+
+.music-controls button {
+  width: 30px;
+  height: 30px;
+
+  border: none;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.6);
+
+  color: #5c7fbe;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.music-controls button:hover {
+  background: rgba(120, 155, 220, 0.18);
+
+  transform: scale(1.08);
+}
+
+.music-play {
+  font-size: 12px;
+}
+
+/* =========================
+   音量控制
+   ========================= */
+
+.music-volume {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+
+  margin-left: 6px;
+}
+
+.volume-icon {
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.volume-slider {
+  width: 65px;
+
+  height: 4px;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background: rgba(100, 130, 180, 0.22);
+
+  border-radius: 10px;
+
+  outline: none;
+
+  cursor: pointer;
+}
+
+/* 滑块轨道 */
+
+.volume-slider::-webkit-slider-runnable-track {
+  height: 4px;
+
+  border-radius: 10px;
+}
+
+/* 滑块 */
+
+.volume-slider::-webkit-slider-thumb {
+  appearance: none;
+  -webkit-appearance: none;
+
+  width: 12px;
+  height: 12px;
+
+  margin-top: -4px;
+
+  border-radius: 50%;
+
+  background: #7196d4;
+
+  border: 2px solid white;
+
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.15);
+
+  cursor: pointer;
+}
+
+.volume-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+/* =========================
+   音乐播放器：展开 / 收起
+   ========================= */
+
+/* 默认收起 */
+#czh-music-player {
+  width: 58px !important;
+  height: 58px !important;
+
+  padding: 6px !important;
+
+  border-radius: 50% !important;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  transition:
+    width 0.35s ease,
+    height 0.35s ease,
+    padding 0.35s ease,
+    border-radius 0.35s ease,
+    transform 0.3s ease;
+}
+
+/* 收起状态隐藏其他内容 */
+#czh-music-player:not(.expanded) .music-info,
+#czh-music-player:not(.expanded) .music-controls,
+#czh-music-player:not(.expanded) .music-volume {
+  display: none;
+}
+
+/* 收起状态下的唱片 */
+#czh-music-player:not(.expanded) .music-cover {
+  cursor: pointer;
+
+  width: 46px;
+  height: 46px;
+
+  flex-shrink: 0;
+}
+
+/* 展开状态 */
+#czh-music-player.expanded {
+  width: 360px !important;
+  height: auto !important;
+
+  padding: 14px 16px !important;
+
+  border-radius: 18px !important;
+
+  justify-content: flex-start;
+}
+
+/* 展开状态显示内容 */
+#czh-music-player.expanded .music-info,
+#czh-music-player.expanded .music-controls,
+#czh-music-player.expanded .music-volume {
+  display: flex;
+}
+
+/* 歌曲信息本身使用纵向排列 */
+#czh-music-player.expanded .music-info {
+  display: block;
+}
+
+/* 展开后唱片仍然可以点击收起 */
+#czh-music-player.expanded .music-cover {
+  cursor: pointer;
+}
+
+/* =========================
+   About Me 页面
+   ========================= */
+
+.about-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* 顶部个人信息 */
+
+.about-header {
+  text-align: center;
+
+  padding: 35px 30px 30px;
+
+  margin-bottom: 20px;
+
+  background: rgba(255, 255, 255, 0.60);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 22px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* 头像 */
+
+.about-avatar img {
+  width: 120px;
+  height: 120px;
+
+  border-radius: 50%;
+
+  object-fit: cover;
+
+  border: 5px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow:
+    0 8px 25px rgba(80, 120, 200, 0.20);
+
+  transition: all 0.35s ease;
+}
+
+.about-avatar img:hover {
+  transform: scale(1.08) rotate(3deg);
+}
+
+/* 名字 */
+
+.about-header h1 {
+  margin-top: 18px;
+  margin-bottom: 8px;
+
+  color: #4f75b8;
+
+  font-size: 32px;
+}
+
+/* 副标题 */
+
+.about-subtitle {
+  margin-bottom: 15px;
+
+  color: #7c88a0;
+
+  font-size: 15px;
+}
+
+/* 自我介绍 */
+
+.about-intro {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  color: #687286;
+
+  line-height: 1.8;
+}
+
+
+/* =========================
+   内容卡片
+   ========================= */
+
+.about-card {
+  margin-bottom: 20px;
+
+  padding: 28px 32px;
+
+  background: rgba(255, 255, 255, 0.60);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.07);
+
+  transition: all 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.10);
+}
+
+/* 标题 */
+
+.about-card h2 {
+  margin-top: 0;
+  margin-bottom: 18px;
+
+  color: #587ec0;
+
+  font-size: 22px;
+}
+
+/* 正文 */
+
+.about-card p {
+  color: #687286;
+
+  line-height: 1.9;
+
+  font-size: 15px;
+}
+
+
+/* =========================
+   技能标签
+   ========================= */
+
+.about-tags {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 12px;
+}
+
+.about-tags span {
+  padding: 8px 15px;
+
+  border-radius: 20px;
+
+  background: rgba(110, 150, 220, 0.12);
+
+  color: #5e7fb7;
+
+  font-size: 14px;
+
+  transition: all 0.25s ease;
+}
+
+.about-tags span:hover {
+  background: rgba(110, 150, 220, 0.20);
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   项目
+   ========================= */
+
+.project-item {
+  padding: 15px 18px;
+
+  margin-bottom: 14px;
+
+  border-radius: 14px;
+
+  background: rgba(120, 150, 220, 0.07);
+}
+
+.project-item:last-child {
+  margin-bottom: 0;
+}
+
+.project-item h3 {
+  margin-top: 0;
+
+  color: #5b79b1;
+
+  font-size: 17px;
+}
+
+.project-item p {
+  margin-bottom: 0;
+}
+
+
+/* =========================
+   页面底部
+   ========================= */
+
+.about-footer {
+  text-align: center;
+
+  padding: 10px 0 30px;
+
+  color: #8390a6;
+
+  font-size: 14px;
+}
+
+/* =========================
+   文章详情页
+   ========================= */
+
+/* 文章主体 */
+#post {
+  background: rgba(255, 255, 255, 0.68) !important;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 20px !important;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08) !important;
+
+  overflow: hidden;
+}
+
+/* 文章标题区域 */
+#post .post-bg,
+#post .post-info {
+  background: transparent !important;
+}
+
+/* 文章标题 */
+#post-info .post-title {
+  color: #4f75b8 !important;
+
+  font-size: 32px !important;
+
+  font-weight: 700;
+}
+
+/* 文章标题下面的信息 */
+#post-info .post-meta {
+  color: #7d8798 !important;
+}
+
+/* 正文 */
+#article-container {
+  color: #5e6675;
+
+  font-size: 16px;
+
+  line-height: 2;
+
+  letter-spacing: 0.2px;
+}
+
+/* 正文标题 */
+#article-container h1,
+#article-container h2,
+#article-container h3,
+#article-container h4 {
+  color: #5578b5 !important;
+}
+
+/* 链接 */
+#article-container a {
+  color: #668fd0 !important;
+
+  border-bottom: 1px dashed rgba(102, 143, 208, 0.4);
+
+  transition: all 0.25s ease;
+}
+
+#article-container a:hover {
+  color: #7b5fc9 !important;
+
+  border-bottom-color: #7b5fc9;
+}
+
+/* 图片 */
+#article-container img {
+  border-radius: 14px;
+
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.10);
+
+  transition: all 0.3s ease;
+}
+
+#article-container img:hover {
+  transform: scale(1.01);
+}
+
+/* 引用 */
+#article-container blockquote {
+  border-left: 4px solid #7196d4;
+
+  background: rgba(110, 150, 220, 0.08);
+
+  border-radius: 0 12px 12px 0;
+
+  color: #6c7688;
+}
+
+/* 分割线 */
+#article-container hr {
+  border: none;
+
+  height: 1px;
+
+  background: rgba(100, 130, 180, 0.15);
+}
+
+/* =========================
+   联系方式
+   ========================= */
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 14px 16px;
+
+  border-radius: 14px;
+
+  background: rgba(110, 150, 220, 0.08);
+
+  color: #5e7fb7 !important;
+
+  text-decoration: none !important;
+
+  border: none !important;
+
+  transition: all 0.25s ease;
+}
+
+.contact-item:hover {
+  transform: translateX(5px);
+
+  background: rgba(110, 150, 220, 0.15);
+}
+
+.contact-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.65);
+
+  font-size: 17px;
+
+  flex-shrink: 0;
+}
+
+.contact-item strong {
+  display: block;
+
+  font-size: 14px;
+
+  color: #587ec0;
+}
+
+.contact-item small {
+  display: block;
+
+  margin-top: 3px;
+
+  font-size: 12px;
+
+  color: #7e8899;
+}
+
+/* =========================
+   文章详情页进一步美化
+   ========================= */
+
+/* 文章整体 */
+#post {
+  background: rgba(255, 255, 255, 0.68) !important;
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border-radius: 22px !important;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08) !important;
+
+  overflow: hidden;
+}
+
+/* 文章标题 */
+#post-info .post-title {
+  letter-spacing: 0.5px;
+
+  text-shadow: 0 2px 10px rgba(80, 120, 200, 0.08);
+}
+
+/* 文章信息 */
+#post-info .post-meta {
+  font-size: 13px !important;
+}
+
+/* 正文段落 */
+#article-container p {
+  margin-top: 0.9em;
+  margin-bottom: 0.9em;
+}
+
+/* 正文列表 */
+#article-container ul,
+#article-container ol {
+  line-height: 1.9;
+}
+
+/* 正文强调 */
+#article-container strong {
+  color: #557bb8;
+}
+
+/* 引用框 */
+#article-container blockquote {
+  margin: 20px 0;
+
+  padding: 12px 18px;
+
+  border-left: 4px solid #7196d4 !important;
+
+  background: rgba(110, 150, 220, 0.08) !important;
+
+  border-radius: 0 12px 12px 0;
+}
+
+/* 图片 */
+#article-container img {
+  border-radius: 14px !important;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.10);
+
+  transition: transform 0.3s ease,
+              box-shadow 0.3s ease;
+}
+
+#article-container img:hover {
+  transform: translateY(-2px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.14);
+}
+
+/* =========================
+   代码块
+   ========================= */
+
+/* 代码块整体 */
+figure.highlight,
+.highlight {
+  position: relative;
+
+  margin: 20px 0 !important;
+
+  border-radius: 16px !important;
+
+  overflow: hidden;
+
+  background: rgba(30, 36, 55, 0.94) !important;
+
+  box-shadow:
+    0 10px 30px rgba(20, 30, 60, 0.16) !important;
+}
+
+/* 代码区域 */
+figure.highlight pre,
+.highlight pre {
+  margin: 0 !important;
+
+  padding: 22px 20px !important;
+
+  background: transparent !important;
+
+  line-height: 1.75 !important;
+
+  font-size: 14px !important;
+
+  font-family:
+    Consolas,
+    "Cascadia Code",
+    "Fira Code",
+    monospace !important;
+}
+
+/* 代码文字 */
+figure.highlight code,
+.highlight code {
+  font-family:
+    Consolas,
+    "Cascadia Code",
+    "Fira Code",
+    monospace !important;
+
+  color: #e8edf7;
+}
+
+/* 代码块顶部的小圆点 */
+figure.highlight::before {
+  content: "●  ●  ●";
+
+  display: block;
+
+  height: 35px;
+
+  padding: 8px 15px 0;
+
+  box-sizing: border-box;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  color: rgba(255, 255, 255, 0.45);
+
+  font-size: 11px;
+
+  letter-spacing: 4px;
+}
+
+/* 代码块悬停 */
+figure.highlight:hover {
+  box-shadow:
+    0 14px 35px rgba(20, 30, 60, 0.20) !important;
+}
+
+/* =========================
+   代码横向滚动
+   ========================= */
+
+figure.highlight pre {
+  overflow-x: auto;
+}
+
+figure.highlight pre::-webkit-scrollbar {
+  height: 6px;
+}
+
+figure.highlight pre::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+
+  border-radius: 10px;
+}
+
+/* =========================
+   代码复制按钮
+   ========================= */
+
+.code-copy-btn {
+  position: absolute;
+
+  top: 8px;
+  right: 10px;
+
+  z-index: 5;
+
+  padding: 5px 10px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: rgba(255, 255, 255, 0.75);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+
+  transition: all 0.2s ease;
+}
+
+.code-copy-btn:hover {
+  background: rgba(255, 255, 255, 0.16);
+
+  color: white;
+
+  transform: translateY(-1px);
+}
+
+.code-copy-btn.copied {
+  background: rgba(100, 190, 150, 0.20);
+
+  color: #b8f0d0;
+}
+
+/* =========================
+   文章阅读进度条
+   ========================= */
+
+#reading-progress {
+  position: fixed !important;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 0;
+
+  height: 5px !important;
+
+  z-index: 2147483647 !important;
+
+  background: linear-gradient(
+    90deg,
+    #6fa8df 0%,
+    #8d7bd1 50%,
+    #67cbd1 100%
+  ) !important;
+
+  box-shadow:
+    0 0 10px rgba(100, 150, 220, 0.65) !important;
+
+  pointer-events: none !important;
+
+  transition: width 0.1s linear;
+}
