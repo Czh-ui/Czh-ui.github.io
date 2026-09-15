@@ -45,7 +45,7 @@ type: "about"
 
   <div class="about-card">
 
- <h2>我曾学过的</h2>
+ <h2>我正在啃的</h2>
 
  <div class="about-tags">
 
@@ -55,11 +55,11 @@ type: "about"
 
  <span>🤖 Arduino</span>
 
- <span>⚡ ESP32</span>
+ <span>⚡ 模电</span>
 
- <span>🌐 Web</span>
+ <span>🌐 通讯技术</span>
 
-  <span>📚 学习</span>
+  <span>📚 概率统计</span>
 
 </div>
 
@@ -71,7 +71,7 @@ type: "about"
 <h2>正在学习</h2>
 
 <p>
-      目前主要接触 C / C++、Arduino、ESP32、嵌入式开发以及 Web 开发。
+      目前主要接触 C / C++、Arduino、模电、嵌入式开发以及通讯技术。
     </p>
 
 <p>
@@ -114,7 +114,7 @@ type: "about"
 <h2>关于这个博客</h2>
 
  <p>
-      这个博客使用 Hexo + Butterfly在ai的帮助下搭建。
+      这个博客使用 Hexo + Butterfly在ai的帮助下搭建（非常简单）。
     </p>
 
 <p>
