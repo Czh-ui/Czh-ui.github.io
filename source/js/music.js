@@ -20,7 +20,11 @@ document.addEventListener('DOMContentLoaded', function () {
     {
       name: 'Mr. Broken Heart',
       url: '/music/music4.mp3'
-    }
+    },
+    {
+      name: 'refrain',
+      url: '/music/music5.mp3'
+    },
   ];
 
   let currentIndex = 0;
